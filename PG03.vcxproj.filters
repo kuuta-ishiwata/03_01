@@ -38,9 +38,6 @@
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
     </ClCompile>
-    <ClCompile Include="IsScene.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
     <ClCompile Include="PlayerBullet.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
@@ -48,21 +45,6 @@
       <Filter>KamataEngine</Filter>
     </ClCompile>
     <ClCompile Include="MATH.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="TitleScene.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="StageScene.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="ClearScene.cpp">
-      <Filter>KamataEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="GameManager.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -138,14 +120,8 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h">
       <Filter>KamataEngine\Include</Filter>
     </ClInclude>
-    <ClInclude Include="IsScene.h" />
     <ClInclude Include="PlayerBullet.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="MATH.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="TitleScene.h" />
-    <ClInclude Include="StageScene.h" />
-    <ClInclude Include="ClearScene.h" />
-    <ClInclude Include="GameManager.h" />
   </ItemGroup>
 </Project>
