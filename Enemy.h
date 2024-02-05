@@ -20,8 +20,8 @@ public:
 
 private:
 
-	Vector2 position_;
-	Vector2 radius_;
+	Vector2 Position_;
+	Vector2 Radius;
 	float speed_;
 	bool isActive_ = false;
 

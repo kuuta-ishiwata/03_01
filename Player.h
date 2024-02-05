@@ -26,11 +26,11 @@ public:
 private:
 
 
-	Vector2 posiiton_;
-	Vector2 radius_;
+	Vector2 Position_;
+	Vector2 Radius_;
 	const char* keys_;
 	const char* preKeys_;
-	float speed_;
+	float Speed_;
 	std::list<PlayerBullet*> playerbullets_;
 
 

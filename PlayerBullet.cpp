@@ -4,11 +4,11 @@
 
 void PlayerBullet::Initialize(float speed, Vector2& position, const char* keys, const char* preKeys)
 {
-	position_ = position;
+	Position_ = position;
 
-	saveposition_ = position;
+	SavePosition_ = position;
 
-	radius_ = { 15.0f,15.0f };
+	Radius_ = { 15.0f,15.0f };
 
 	keys_ = keys;
 
@@ -26,11 +26,11 @@ void PlayerBullet::Update(Vector2& position)
 	}
 	if (isShot_ == true)
 	{
-		position_.y = position_.y - speed_;
+		Position_.y = Position_.y - speed_;
 	}
-	if (position_.y + radius_.y <= -100)
+	if (Position_.y + Radius_.y <= -100)
 	{
-		position_ = position;
+		Position_ = position;
 		isShot_ = false;
 	}
 
@@ -40,13 +40,13 @@ void PlayerBullet::Draw()
 {
 	if (isShot_ == true)
 	{
-		Novice::DrawBox((int)position_.x, (int)position_.y, (int)radius_.x, (int)radius_.y, 0.0f, RED, kFillModeSolid);
+		Novice::DrawBox((int)Position_.x, (int)Position_.y, (int)Radius_.x, (int)Radius_.y, 0.0f, RED, kFillModeSolid);
 	}
 }
 
 void PlayerBullet::OnCollision(Vector2& position)
 {
-	position_ = position;
+	Position_ = position;
 	isShot_ = false;
 
 }
@@ -54,8 +54,8 @@ void PlayerBullet::OnCollision(Vector2& position)
 Vector2 PlayerBullet::GetRadius()
 {
 	Vector2 radius;
-	radius.x = radius_.x;
-	radius.y = radius_.y;
+	radius.x = Radius_.x;
+	radius.y = Radius_.y;
 	return radius;
 }
 
@@ -63,7 +63,7 @@ Vector2 PlayerBullet::GetPosition()
 {
 	Vector2 pos;
 
-	pos.x = position_.x;
-	pos.y = position_.y;
+	pos.x = Position_.x;
+	pos.y = Position_.y;
 	return pos;
 }

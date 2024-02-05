@@ -19,9 +19,9 @@ public:
 private:
 
 
-	Vector2 position_;
-    Vector2 radius_;
-	Vector2 saveposition_;
+	Vector2 Position_;
+    Vector2 Radius_;
+	Vector2 SavePosition_;
 
 	const char* keys_;
 	const char* preKeys_;

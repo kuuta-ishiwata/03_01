@@ -4,56 +4,56 @@
 
 Player::~Player()
 {
-	for (PlayerBullet* bullet : playerbullets_)
+	for (PlayerBullet* Bullet : playerbullets_)
 	{
-		delete bullet;
+		delete Bullet;
 	}
 }
 
 void Player::Initialize(const char* keys, const char* preKeys)
 {
-	posiiton_ = { 500.0f,350.0f };
+	Position_ = { 500.0f,350.0f };
 
-	radius_ = { 40.0f,40.0f };
+	Radius_ = { 40.0f,40.0f };
 	keys_ = keys;
 	preKeys_ = preKeys;
-	speed_ = 4.0f;
+	Speed_ = 4.0f;
 }
 
 void Player::Update()
 {
 	if (keys_[DIK_D])
 	{
-		posiiton_.x += speed_;
+		Position_.x += Speed_;
 	}
 	else if (keys_[DIK_A])
 	{
-		posiiton_.x -= speed_;
+		Position_.x -= Speed_;
 	}
 	if (keys_[DIK_S])
 	{
-		posiiton_.y += speed_;
+		Position_.y += Speed_;
 	}
 	else if (keys_[DIK_W])
 	{
-		posiiton_.y -= speed_;
+		Position_.y -= Speed_;
 	}
 
 	Attack();
-	for (PlayerBullet* bullet : playerbullets_)
+	for (PlayerBullet* Bullet : playerbullets_)
 	{
-		bullet->Update(posiiton_);
+		Bullet->Update(Position_);
 	}
 
 }
 
 void Player::Draw()
 {
-	Novice::DrawBox((int)posiiton_.x, (int)posiiton_.y, (int)radius_.x, (int)radius_.y, 0.0f, WHITE, kFillModeSolid);
+	Novice::DrawBox((int)Position_.x, (int)Position_.y, (int)Radius_.x, (int)Radius_.y, 0.0f, WHITE, kFillModeSolid);
 
-	for (PlayerBullet* bullet : playerbullets_)
+	for (PlayerBullet* Bullet : playerbullets_)
 	{
-		bullet->Draw();
+		Bullet->Draw();
 	}
 }
 
@@ -62,9 +62,9 @@ void Player::Attack()
 	if (keys_[DIK_SPACE] && !preKeys_[DIK_SPACE])
 	{
 
-		const float bulletspeed = 8.0f;
+		const float BulletSpeed = 8.0f;
 		PlayerBullet* newbullet = new PlayerBullet();
-		newbullet->Initialize(bulletspeed, posiiton_, keys_, preKeys_);
+		newbullet->Initialize(BulletSpeed, Position_, keys_, preKeys_);
 
 		playerbullets_.push_back(newbullet);
 	}
@@ -73,9 +73,9 @@ void Player::Attack()
 Vector2 Player::GetPosiiton()
 {
 
-	Vector2 position;
+	Vector2 Position;
 
-	position.x = posiiton_.x;
-	position.y = posiiton_.y;
-	return position;
+	Position.x = Position_.x;
+	Position.y = Position_.y;
+	return Position;
 }
