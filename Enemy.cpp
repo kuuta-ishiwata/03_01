@@ -1,6 +1,5 @@
 ﻿#include "Enemy.h"
 #include"Novice.h"
-#include"MATH.h"
 
 void Enemy::Initialize()
 {

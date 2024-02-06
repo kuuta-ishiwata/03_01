@@ -1,6 +1,5 @@
 #include "Player.h"
 #include "Novice.h"
-#include "MATH.h"
 
 Player::~Player()
 {
